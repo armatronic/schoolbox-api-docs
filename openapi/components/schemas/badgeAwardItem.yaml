@@ -215,9 +215,9 @@ properties:
   isGoal:
     type: boolean
     example: true
-  award:
-    $ref: ./badgeAwardItem.yaml
-    nullable: true
+#  award:
+#    $ref: ./badgeAwardItem.yaml
+#    nullable: true
   recipient:
     type: object
     properties:

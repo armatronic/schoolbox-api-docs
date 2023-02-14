@@ -11,9 +11,9 @@ properties:
     $ref: ./dateTime.yaml
   updated:
     $ref: ./dateTime.yaml
-  children:
-    allOf:
-      - $ref: ./discussionComment-readList.yaml
+#  children:
+#    allOf:
+#      - $ref: ./discussionComment-readList.yaml
     description: A list of direct child comments of this thread
 required:
   - id
