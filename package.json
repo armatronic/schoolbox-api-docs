@@ -12,6 +12,7 @@
   "scripts": {
     "build": "redocly bundle -o docs/builds/${npm_config_build_version}.yaml && ./scripts/addBuild.js ${npm_config_build_version} ${npm_config_selected} && ./scripts/applyVersion.js ${npm_config_build_version} docs/builds/${npm_config_build_version}.yaml",
     "rebuild-builds-list": "./scripts/rebuildBuildsList.js",
+    "build-diff": "./scripts/buildDiff.js",
     "test": "redocly lint"
   }
 }
