@@ -4,7 +4,9 @@
   "dependencies": {
     "@redocly/cli": "^1.0.0-beta.109",
     "@redocly/openapi-core": "^1.0.0-beta.109",
-    "semver": "^7.3.7"
+    "json-schema-diff": "^0.18.0",
+    "semver": "^7.3.7",
+    "yaml": "^2.2.1"
   },
   "private": true,
   "scripts": {
