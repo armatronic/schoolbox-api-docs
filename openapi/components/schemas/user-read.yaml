@@ -1,3 +1,4 @@
 allOf:
   - $ref: ./user-readableFields.yaml
   - $ref: ./user-fields.yaml
+  - $ref: ./user-recursiveFields.yaml
