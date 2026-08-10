@@ -10,9 +10,9 @@ post:
     For a recurring event, Schoolbox attempts to book the resources for every
     occurrence created in the series.
 
-    The event is created before its resource bookings are attempted. Resource-
-    booking failures are returned in `bookingErrors` and do not mean that event
-    creation failed.
+    The event is created before its resource bookings are attempted.
+    Resource-booking failures are returned in `bookingErrors` and do not mean
+    that event creation failed.
   requestBody:
     description: |
       The event to create
