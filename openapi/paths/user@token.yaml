@@ -21,3 +21,46 @@ get:
       $ref: ../components/responses/userToken.yaml
     default:
       $ref: ../components/responses/problem.yaml
+
+post:
+  operationId: userCreateTokenForSelf
+  tags: [user]
+  summary: Create an authentication token
+  description: |
+    Create an authentication token for the user.
+
+    This endpoint is intended so that in-browser API calls performed within
+    a Schoolbox instance may be performed in a manner more in common with
+    calls to a remote API.
+
+    This endpoint only makes sense for users authenticated with the "session"
+    security scheme, as it returns a token which is used by the "bearerAuth"
+    scheme.
+  security:
+    - session: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+              description: |
+                An optional name for this token.
+
+                It should be used to identify the application which uses this
+                token, or the purpose for which it is used.
+            expiry:
+              type: string
+              format: date-time
+              description: |
+                The time after which the token will expire, and be no longer usable.
+
+                Will default to 6 months after the current time.
+
+  responses:
+    '200':
+      $ref: ../components/responses/userToken.yaml
+    default:
+      $ref: ../components/responses/problem.yaml
