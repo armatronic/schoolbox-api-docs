@@ -31,11 +31,12 @@ properties:
       The identifier of the JWT.
     example: u82jddg5-ky61-z9w3-0098-334hxb27dhg0
   showExisting:
+    deprecated: true
     type: boolean
     description: |
-      This is `true` when a JWT was either generated for the user, or it already existed for the user.
+      This was `true` when a JWT ID was either generated for the user, or it
+      already existed for the user.
+
+      Since a JWT ID is always generated now, this parameter is deprecated and
+      no longer provided.
     example: true
-      
-      
-      
-    
