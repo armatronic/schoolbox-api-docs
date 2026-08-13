@@ -135,6 +135,9 @@ paths:
   /user/token/{id}:
     $ref: 'paths/user@token@{id}.yaml'
 
+  /user/token/manage/{jwtId}:
+    $ref: 'paths/user@token@manage@{jwtId}.yaml'
+
   /api/user/{id}:
     $ref: 'paths/user@{id}.yaml'
 
