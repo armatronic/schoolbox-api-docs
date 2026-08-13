@@ -1,5 +1,18 @@
 type: object
 properties:
+  name:
+    type: string
+    nullable: true
+    description: |
+      An optional name for this token.
+
+      It should be used to identify the application which uses this
+      token, or the purpose for which it is used.
+  user:
+    allOf:
+      - $ref: ./userAuthor.yaml
+      - description: |
+          The user which is the subject of the token.
   jwtId:
     type: string
     description: |
@@ -34,6 +47,12 @@ properties:
         description: |
           The creation datetime for the token, as a human-readable date.
         example: Nov 11, 2025 2:45pm
+  updatedAt:
+    type: string
+    format: date-time
+    description: |
+      The last updated datetime for the token, as a standard datetime string.
+    example: 2025-11-11T14:45:00Z
   expiry:
     oneOf:
       - type: string
@@ -59,6 +78,11 @@ properties:
         description: |
           The full name of the user who created the token.
         example: John Smith
+  updatedBy:
+    allOf:
+      - $ref: ./userAuthor.yaml
+      - description: |
+          The user who last updated the token.
   showExisting:
     deprecated: true
     type: boolean
