@@ -57,14 +57,16 @@ post:
               description: |
                 The time after which the token will expire, and be no longer usable.
 
-                Will default to 6 months after the current time.
+                Will default to 6 months in the future, and will be reduced to
+                that if greater than that.
             expiryInterval:
               type: integer
               description: |
                 The number of months after which the token will expire, and be
                 no longer usable.
 
-                May be provided as an alternative to `expiry`.
+                May be provided as an alternative to `expiry`, but is still
+                bound to a maximum of 6 months.
 
   responses:
     '200':
