@@ -1,9 +1,11 @@
 get:
   operationId: userGetTokenForSelf
+  deprecated: true
   tags: [user]
   summary: Get an authentication token
   description: |
-    Retrieve an authentication token for the user
+    Retrieve an authentication token for the user: deprecated in favour of the
+    `POST` variant.
 
     This endpoint is intended so that in-browser API calls performed within
     a Schoolbox instance may be performed in a manner more in common with
