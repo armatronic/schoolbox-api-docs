@@ -1,11 +1,23 @@
 type: object
 properties:
+  jwtId:
+    type: string
+    description: |
+      The automatically generated identifier of the token.
+
+      Will be passed as the `jti` (JWT ID) claim in the JWT, and used to:
+      - track usage of the token
+      - verify that it is not expired
+      - (in future) verify that the scopes in the JWT match what was allowed
+        when setting up the token
+    example: u82jddg5-ky61-z9w3-0098-334hxb27dhg0
   token:
     type: string
     description: |
-      A JSON Web Token (JWT) which authenticates the bearer as a particular
-      user, and allows the bearer to perform API calls within the context of
-      that user.
+      A JSON Web Token (JWT) representation of the token.
+
+      This JWT authenticates the bearer as a particular user, and allows the
+      bearer to perform API calls within the context of that user.
 
       This token is passed to the Schoolbox API according to the "BearerAuth"
       security scheme (i.e. in a HTTP header `Authorization: Bearer $token`).
@@ -25,11 +37,6 @@ properties:
     description: |
       The user who created the token.
     example: John Smith
-  jwtId:
-    type: string
-    description: |
-      The identifier of the JWT.
-    example: u82jddg5-ky61-z9w3-0098-334hxb27dhg0
   showExisting:
     deprecated: true
     type: boolean
