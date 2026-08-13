@@ -31,8 +31,6 @@ delete:
     Delete an already-created authentication token.
 
     Only the token's subject, or a superuser, may delete a token.
-  requestBody:
-    $ref: ../components/requestBodies/userToken-update.yaml
   responses:
     '204':
       description: The token was deleted successfully.
