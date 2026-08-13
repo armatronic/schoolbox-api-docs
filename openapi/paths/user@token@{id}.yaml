@@ -1,6 +1,6 @@
 post:
   operationId: userGetTokenForUser
-  tags: [user]
+  tags: [userToken]
   summary: Create an authentication token for a user
   description: |
     Retrieve an authentication token for another user.

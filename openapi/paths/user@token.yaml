@@ -1,7 +1,7 @@
 get:
   operationId: userGetTokenForSelf
   deprecated: true
-  tags: [user]
+  tags: [userToken]
   summary: Get an authentication token
   description: |
     Retrieve an authentication token for the user: deprecated in favour of the
@@ -24,7 +24,7 @@ get:
 
 post:
   operationId: userCreateTokenForSelf
-  tags: [user]
+  tags: [userToken]
   summary: Create an authentication token
   description: |
     Create an authentication token for the user.

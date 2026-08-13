@@ -112,6 +112,11 @@ tags:
     description: |
       Create and manage users.
 
+  - name: userToken
+    x-displayName: User tokens
+    description: |
+      Create and manage user tokens, for authenticating at a later time.
+
   - name: differentiation
     x-displayName: Differentiation
     description: |
