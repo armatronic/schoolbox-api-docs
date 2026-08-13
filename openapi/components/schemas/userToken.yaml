@@ -24,17 +24,6 @@ properties:
       - (in future) verify that the scopes in the JWT match what was allowed
         when setting up the token
     example: u82jddg5-ky61-z9w3-0098-334hxb27dhg0
-  token:
-    type: string
-    description: |
-      A JSON Web Token (JWT) representation of the token.
-
-      This JWT authenticates the bearer as a particular user, and allows the
-      bearer to perform API calls within the context of that user.
-
-      This token is passed to the Schoolbox API according to the "BearerAuth"
-      security scheme (i.e. in a HTTP header `Authorization: Bearer $token`).
-    example: 3MiOiJ2YWdyYW50LmRldi5zY2hvb2xib3guY2xvdWQiLCJzdWIiOiJhbGFyZXNzIiwianRpIjoiZDM1N...
   createdAt:
     oneOf:
       - type: string

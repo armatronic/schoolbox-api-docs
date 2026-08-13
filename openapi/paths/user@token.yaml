@@ -70,6 +70,6 @@ post:
 
   responses:
     '200':
-      $ref: ../components/responses/userToken.yaml
+      $ref: ../components/responses/userToken-created.yaml
     default:
       $ref: ../components/responses/problem.yaml
