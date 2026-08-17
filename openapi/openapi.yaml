@@ -78,7 +78,7 @@ tags:
     description: |
       Search and manage groups.
 
-  - name: Learning Moment
+  - name: learningMoment
     x-displayName: Learning Moment
     description: |
       Create and manage Learning Moments.
@@ -121,6 +121,16 @@ tags:
     x-displayName: Differentiation
     description: |
       Create and manage differentiation profiles.
+
+  - name: curriculum
+    x-displayName: Curriculum
+    description: |
+      Create and manage curriculum data.
+
+  - name: course
+    x-displayName: Course
+    description: |
+      Create and manage course data.
 
 servers:
   - url: https://{hostname}.{domain}
