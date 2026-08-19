@@ -46,7 +46,9 @@ post:
   responses:
     '200':
       description: |
-        The created event
+        The created event. If event creation succeeds but resource bookings
+        fail, the response remains HTTP 200 and details are returned in
+        `bookingErrors`.
       content:
         application/json:
           schema:
